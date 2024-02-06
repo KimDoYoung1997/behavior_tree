@@ -119,5 +119,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/bt_simple_pick.dir/DependInfo.cmake"
+  "CMakeFiles/simple_bt.dir/DependInfo.cmake"
   )

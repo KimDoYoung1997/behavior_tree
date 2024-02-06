@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bt_simple_pick
+# Target rules for targets named simple_bt
 
 # Build rule for target.
-bt_simple_pick: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bt_simple_pick
-.PHONY : bt_simple_pick
+simple_bt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_bt
+.PHONY : simple_bt
 
 # fast build rule for target.
-bt_simple_pick/fast:
-	$(MAKE) -f CMakeFiles/bt_simple_pick.dir/build.make CMakeFiles/bt_simple_pick.dir/build
-.PHONY : bt_simple_pick/fast
+simple_bt/fast:
+	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/build
+.PHONY : simple_bt/fast
 
 simple_bt.o: simple_bt.cpp.o
 
@@ -129,7 +129,7 @@ simple_bt.o: simple_bt.cpp.o
 
 # target to build an object file
 simple_bt.cpp.o:
-	$(MAKE) -f CMakeFiles/bt_simple_pick.dir/build.make CMakeFiles/bt_simple_pick.dir/simple_bt.cpp.o
+	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/simple_bt.cpp.o
 .PHONY : simple_bt.cpp.o
 
 simple_bt.i: simple_bt.cpp.i
@@ -138,7 +138,7 @@ simple_bt.i: simple_bt.cpp.i
 
 # target to preprocess a source file
 simple_bt.cpp.i:
-	$(MAKE) -f CMakeFiles/bt_simple_pick.dir/build.make CMakeFiles/bt_simple_pick.dir/simple_bt.cpp.i
+	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/simple_bt.cpp.i
 .PHONY : simple_bt.cpp.i
 
 simple_bt.s: simple_bt.cpp.s
@@ -147,7 +147,7 @@ simple_bt.s: simple_bt.cpp.s
 
 # target to generate assembly for a file
 simple_bt.cpp.s:
-	$(MAKE) -f CMakeFiles/bt_simple_pick.dir/build.make CMakeFiles/bt_simple_pick.dir/simple_bt.cpp.s
+	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/simple_bt.cpp.s
 .PHONY : simple_bt.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... bt_simple_pick"
+	@echo "... simple_bt"
 	@echo "... simple_bt.o"
 	@echo "... simple_bt.i"
 	@echo "... simple_bt.s"
