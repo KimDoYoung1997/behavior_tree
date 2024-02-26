@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/keti/behavior_tree_ws/grasp_ball_robot_demo/bt_demo.cpp
+behaviortree_cpp/basic_types.h
+-
+behaviortree_cpp/decorators/subtree_node.h
+-
+iostream
+-
+chrono
+-
+string
+-
+thread
+-
+behaviortree_cpp/bt_factory.h
+/home/keti/behavior_tree_ws/grasp_ball_robot_demo/behaviortree_cpp/bt_factory.h
+behaviortree_cpp/action_node.h
+/home/keti/behavior_tree_ws/grasp_ball_robot_demo/behaviortree_cpp/action_node.h
+

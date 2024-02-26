@@ -15,7 +15,9 @@ public:
     //Member Initialization list
     : BT::SyncActionNode(name,{})
     {
-
+        std::cout <<"ApproachObject class Constructor!" << std::endl;
+        //std::this_thread::sleep_for(5s);
+        
     }
 
     BT::NodeStatus tick() override 
@@ -91,7 +93,7 @@ int main()
     auto tree = factory.createTreeFromFile("./../bt_tree.xml");
 
 
-    // execcute the tree
+    // execute the tree
     tree.tickWhileRunning(); // tree.tickRoot();
 
 

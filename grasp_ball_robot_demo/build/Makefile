@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/keti/behavior_tree_ws/simple_bt
+CMAKE_SOURCE_DIR = /home/keti/behavior_tree_ws/grasp_ball_robot_demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/keti/behavior_tree_ws/simple_bt/build
+CMAKE_BINARY_DIR = /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/simple_bt/build/CMakeFiles /home/keti/behavior_tree_ws/simple_bt/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/simple_bt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,84 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named review
+# Target rules for targets named grasp_place_robot_demo
 
 # Build rule for target.
-review: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 review
-.PHONY : review
+grasp_place_robot_demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grasp_place_robot_demo
+.PHONY : grasp_place_robot_demo
 
 # fast build rule for target.
-review/fast:
-	$(MAKE) -f CMakeFiles/review.dir/build.make CMakeFiles/review.dir/build
-.PHONY : review/fast
+grasp_place_robot_demo/fast:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/build
+.PHONY : grasp_place_robot_demo/fast
 
-#=============================================================================
-# Target rules for targets named simple_bt
+bt_demo.o: bt_demo.cpp.o
 
-# Build rule for target.
-simple_bt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simple_bt
-.PHONY : simple_bt
-
-# fast build rule for target.
-simple_bt/fast:
-	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/build
-.PHONY : simple_bt/fast
-
-review.o: review.cpp.o
-
-.PHONY : review.o
+.PHONY : bt_demo.o
 
 # target to build an object file
-review.cpp.o:
-	$(MAKE) -f CMakeFiles/review.dir/build.make CMakeFiles/review.dir/review.cpp.o
-.PHONY : review.cpp.o
+bt_demo.cpp.o:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/bt_demo.cpp.o
+.PHONY : bt_demo.cpp.o
 
-review.i: review.cpp.i
+bt_demo.i: bt_demo.cpp.i
 
-.PHONY : review.i
-
-# target to preprocess a source file
-review.cpp.i:
-	$(MAKE) -f CMakeFiles/review.dir/build.make CMakeFiles/review.dir/review.cpp.i
-.PHONY : review.cpp.i
-
-review.s: review.cpp.s
-
-.PHONY : review.s
-
-# target to generate assembly for a file
-review.cpp.s:
-	$(MAKE) -f CMakeFiles/review.dir/build.make CMakeFiles/review.dir/review.cpp.s
-.PHONY : review.cpp.s
-
-simple_bt.o: simple_bt.cpp.o
-
-.PHONY : simple_bt.o
-
-# target to build an object file
-simple_bt.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/simple_bt.cpp.o
-.PHONY : simple_bt.cpp.o
-
-simple_bt.i: simple_bt.cpp.i
-
-.PHONY : simple_bt.i
+.PHONY : bt_demo.i
 
 # target to preprocess a source file
-simple_bt.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/simple_bt.cpp.i
-.PHONY : simple_bt.cpp.i
+bt_demo.cpp.i:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/bt_demo.cpp.i
+.PHONY : bt_demo.cpp.i
 
-simple_bt.s: simple_bt.cpp.s
+bt_demo.s: bt_demo.cpp.s
 
-.PHONY : simple_bt.s
+.PHONY : bt_demo.s
 
 # target to generate assembly for a file
-simple_bt.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_bt.dir/build.make CMakeFiles/simple_bt.dir/simple_bt.cpp.s
-.PHONY : simple_bt.cpp.s
+bt_demo.cpp.s:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/bt_demo.cpp.s
+.PHONY : bt_demo.cpp.s
 
 # Help Target
 help:
@@ -198,14 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... review"
-	@echo "... simple_bt"
-	@echo "... review.o"
-	@echo "... review.i"
-	@echo "... review.s"
-	@echo "... simple_bt.o"
-	@echo "... simple_bt.i"
-	@echo "... simple_bt.s"
+	@echo "... grasp_place_robot_demo"
+	@echo "... bt_demo.o"
+	@echo "... bt_demo.i"
+	@echo "... bt_demo.s"
 .PHONY : help
 
 
