@@ -7,15 +7,18 @@
                     <!-- Condition node : ball_found -->
                     <BallFound name="ball_found_keti"/> 
                     <!-- Action node : find_ball -->
-                    <FindBall name="find_ball_keti"/>
+                    <!-- output port 이름 : ball_location  , key: location , value는 아직 설정 안 함-->
+                    <FindBall name="find_ball_keti" ball_location="{location}"/>
                 </Fallback>
 
                 <!-- Fallback node : approack_ball_fallback -->
                 <Fallback name="approach_ball_fallback_keti">
                     <!-- Condition node : ball_close -->
-                    <BallClose name="ball_close_keti"/>
+                    <!-- input port 이름 : ball_location  , key: location , value는 아직 설정 안 함-->
+                    <BallClose name="ball_close_keti" ball_location="{location}"/>
                     <!-- Action node : approach_ball -->
-                    <ApproachBall name="approach_ball_keti"/>
+                    <!-- input port 이름 : ball_location  , key: location , value는 아직 설정 안 함-->
+                    <ApproachBall name="approach_ball_keti" ball_location="{location}"/>
                 </Fallback>
 
                 <!-- Fallback node : grasp_ball_fallback -->
