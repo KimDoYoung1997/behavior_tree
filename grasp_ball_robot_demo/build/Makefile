@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named grasp_place_robot_demo_ports
+
+# Build rule for target.
+grasp_place_robot_demo_ports: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grasp_place_robot_demo_ports
+.PHONY : grasp_place_robot_demo_ports
+
+# fast build rule for target.
+grasp_place_robot_demo_ports/fast:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/build
+.PHONY : grasp_place_robot_demo_ports/fast
+
+#=============================================================================
 # Target rules for targets named docking
 
 # Build rule for target.
@@ -163,6 +176,33 @@ bt_demo.cpp.s:
 	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/bt_demo.cpp.s
 .PHONY : bt_demo.cpp.s
 
+bt_demo_ports.o: bt_demo_ports.cpp.o
+
+.PHONY : bt_demo_ports.o
+
+# target to build an object file
+bt_demo_ports.cpp.o:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/bt_demo_ports.cpp.o
+.PHONY : bt_demo_ports.cpp.o
+
+bt_demo_ports.i: bt_demo_ports.cpp.i
+
+.PHONY : bt_demo_ports.i
+
+# target to preprocess a source file
+bt_demo_ports.cpp.i:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/bt_demo_ports.cpp.i
+.PHONY : bt_demo_ports.cpp.i
+
+bt_demo_ports.s: bt_demo_ports.cpp.s
+
+.PHONY : bt_demo_ports.s
+
+# target to generate assembly for a file
+bt_demo_ports.cpp.s:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/bt_demo_ports.cpp.s
+.PHONY : bt_demo_ports.cpp.s
+
 docking.o: docking.cpp.o
 
 .PHONY : docking.o
@@ -198,11 +238,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... grasp_place_robot_demo_ports"
 	@echo "... docking"
 	@echo "... grasp_place_robot_demo"
 	@echo "... bt_demo.o"
 	@echo "... bt_demo.i"
 	@echo "... bt_demo.s"
+	@echo "... bt_demo_ports.o"
+	@echo "... bt_demo_ports.i"
+	@echo "... bt_demo_ports.s"
 	@echo "... docking.o"
 	@echo "... docking.i"
 	@echo "... docking.s"

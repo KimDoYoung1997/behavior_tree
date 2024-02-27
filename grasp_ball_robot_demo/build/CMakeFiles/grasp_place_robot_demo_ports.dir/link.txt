@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/grasp_place_robot_demo_ports.dir/bt_demo_ports.cpp.o  -o grasp_place_robot_demo_ports  -Wl,-rpath,/usr/local/lib /usr/local/lib/libbehaviortree_cpp.so 

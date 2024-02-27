@@ -11,3 +11,6 @@ target_link_libraries(${PROJECT_NAME} BT::behaviortree_cpp)
 
 add_executable(docking "docking.cpp")
 target_link_libraries(docking BT::behaviortree_cpp)
+
+add_executable(grasp_place_robot_demo_ports "bt_demo_ports.cpp")
+target_link_libraries(grasp_place_robot_demo_ports BT::behaviortree_cpp)

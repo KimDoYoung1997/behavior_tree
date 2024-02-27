@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/grasp_place_robot_demo_ports.dir/all
 all: CMakeFiles/docking.dir/all
 all: CMakeFiles/grasp_place_robot_demo.dir/all
 
@@ -64,10 +65,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/grasp_place_robot_demo_ports.dir/clean
 clean: CMakeFiles/docking.dir/clean
 clean: CMakeFiles/grasp_place_robot_demo.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/grasp_place_robot_demo_ports.dir
+
+# All Build rule for target.
+CMakeFiles/grasp_place_robot_demo_ports.dir/all:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/depend
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles --progress-num=5,6 "Built target grasp_place_robot_demo_ports"
+.PHONY : CMakeFiles/grasp_place_robot_demo_ports.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/grasp_place_robot_demo_ports.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/grasp_place_robot_demo_ports.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles 0
+.PHONY : CMakeFiles/grasp_place_robot_demo_ports.dir/rule
+
+# Convenience name for target.
+grasp_place_robot_demo_ports: CMakeFiles/grasp_place_robot_demo_ports.dir/rule
+
+.PHONY : grasp_place_robot_demo_ports
+
+# clean rule for target.
+CMakeFiles/grasp_place_robot_demo_ports.dir/clean:
+	$(MAKE) -f CMakeFiles/grasp_place_robot_demo_ports.dir/build.make CMakeFiles/grasp_place_robot_demo_ports.dir/clean
+.PHONY : CMakeFiles/grasp_place_robot_demo_ports.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/docking.dir
