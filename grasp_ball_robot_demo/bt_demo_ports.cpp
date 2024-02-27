@@ -188,7 +188,7 @@ int main()
     factory.registerNodeType<AskForHelp>("AskForHelp"); // Action node with inheritance of SyncActionNode
 
 // Create Tree
-    auto tree = factory.createTreeFromFile("./../bt_tree.xml");
+    auto tree = factory.createTreeFromFile("./../bt_tree_ports.xml");
 // execute the tree
     tree.tickWhileRunning(); // tree.tickRoot();
 

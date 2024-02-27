@@ -1,0 +1,51 @@
+<root main_tree_to_execute="MainTree" BTCPP_format="4">
+    <BehaviorTree ID="MainTree">
+        <Fallback name="root_fallback_keti">
+            <Sequence name="robot_function_keti">
+                <!-- Fallback node : find_ball_fallback -->
+                <Fallback name="find_ball_fallback_keti">
+                    <!-- Condition node : ball_found -->
+                    <BallFound name="ball_found_keti"/> 
+                    <!-- Action node : find_ball -->
+                    <FindBall name="find_ball_keti"/>
+                </Fallback>
+
+                <!-- Fallback node : approack_ball_fallback -->
+                <Fallback name="approach_ball_fallback_keti">
+                    <!-- Condition node : ball_close -->
+                    <BallClose name="ball_close_keti"/>
+                    <!-- Action node : approach_ball -->
+                    <ApproachBall name="approach_ball_keti"/>
+                </Fallback>
+
+                <!-- Fallback node : grasp_ball_fallback -->
+                <Fallback name="grasp_ball_fallback_keti">
+                    <!-- Condition node : ball_grasped -->
+                    <BallGrasped name="ball_grasped_keti"/>
+                    <!-- Action node : grasp_ball -->
+                    <GraspBall name="grasp_ball_keti"/>
+                </Fallback>
+
+                <!-- Fallback node :  -->
+                <Fallback name="approach_bin_fallback_keti">
+                    <!-- Condition node : bin_close -->
+                    <BinClose name="bin_close_keti"/>
+                    <!-- Action node : approach_bin -->
+                    <ApproachBin name="approach_bin_keti"/>
+                </Fallback>
+
+                <!-- Fallback node : place_ball_fallback -->
+                <Fallback name="place_ball_fallback_keti">
+                    <!-- Condition node : ball_placed -->
+                    <BallPlaced name="ball_placed_keti"/>
+                    <!-- Action node : place_ball -->
+                    <PlaceBall name="place_ball_keti"/>
+                </Fallback>
+            </Sequence>
+
+            <!-- Action node : ask_for_help -->
+            <AskForHelp name="ask_for_help_keti"/>
+
+        </Fallback>
+    </BehaviorTree>
+</root >
