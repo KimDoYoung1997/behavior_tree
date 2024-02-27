@@ -8,3 +8,6 @@ find_package(behaviortree_cpp)
 
 add_executable(${PROJECT_NAME} "bt_demo.cpp")
 target_link_libraries(${PROJECT_NAME} BT::behaviortree_cpp)
+
+add_executable(docking "docking.cpp")
+target_link_libraries(docking BT::behaviortree_cpp)

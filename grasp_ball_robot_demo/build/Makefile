@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named docking
+
+# Build rule for target.
+docking: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 docking
+.PHONY : docking
+
+# fast build rule for target.
+docking/fast:
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/build
+.PHONY : docking/fast
+
+#=============================================================================
 # Target rules for targets named grasp_place_robot_demo
 
 # Build rule for target.
@@ -150,6 +163,33 @@ bt_demo.cpp.s:
 	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/bt_demo.cpp.s
 .PHONY : bt_demo.cpp.s
 
+docking.o: docking.cpp.o
+
+.PHONY : docking.o
+
+# target to build an object file
+docking.cpp.o:
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/docking.cpp.o
+.PHONY : docking.cpp.o
+
+docking.i: docking.cpp.i
+
+.PHONY : docking.i
+
+# target to preprocess a source file
+docking.cpp.i:
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/docking.cpp.i
+.PHONY : docking.cpp.i
+
+docking.s: docking.cpp.s
+
+.PHONY : docking.s
+
+# target to generate assembly for a file
+docking.cpp.s:
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/docking.cpp.s
+.PHONY : docking.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... docking"
 	@echo "... grasp_place_robot_demo"
 	@echo "... bt_demo.o"
 	@echo "... bt_demo.i"
 	@echo "... bt_demo.s"
+	@echo "... docking.o"
+	@echo "... docking.i"
+	@echo "... docking.s"
 .PHONY : help
 
 

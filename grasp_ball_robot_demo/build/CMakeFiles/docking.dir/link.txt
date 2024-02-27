@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/docking.dir/docking.cpp.o  -o docking  -Wl,-rpath,/usr/local/lib /usr/local/lib/libbehaviortree_cpp.so 

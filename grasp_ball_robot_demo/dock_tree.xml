@@ -1,0 +1,51 @@
+<root main_tree_to_execute="MainTree" BTCPP_format="4">
+    <BehaviorTree ID="MainTree">
+        <Fallback name="root_fallback_keti">
+            <Sequence name="robot_function_keti">
+                <!-- Fallback node : find_ball_fallback -->
+                <Fallback name="find_ball_fallback_keti">
+                    <!-- Condition node : ball_found -->
+                    <DockingPointFound name="docking_point_Found_keti"/> 
+                    <!-- Action node : find_ball -->
+                    <FindDockingPoint name="find_docking_point_keti"/>
+                </Fallback>
+
+                <!-- Fallback node : approack_ball_fallback -->
+                <Fallback name="approach_ball_fallback_keti">
+                    <!-- Condition node : ball_close -->
+                    <DockingPointClose name="docking_point_Close_keti"/>
+                    <!-- Action node : approach_ball -->
+                    <ApproachDockingPoint name="approach_docking_point_keti"/>
+                </Fallback>
+
+                <!-- Fallback node : grasp_ball_fallback -->
+                <Fallback name="grasp_ball_fallback_keti">
+                    <!-- Condition node : ball_grasped -->
+                    <DockingFinished name="docking_Finished_keti"/>
+                    <!-- Action node : grasp_ball -->
+                    <LiftUp name="lift_up_keti"/>
+                </Fallback>
+
+                <!-- Fallback node :  -->
+                <Fallback name="approach_bin_fallback_keti">
+                    <!-- Condition node : bin_close -->
+                    <LiftFinished name="lift_Finished_keti"/>
+                    <!-- Action node : approach_bin -->
+                    <CommandRMF name="command_rmf_keti"/>
+                </Fallback>
+
+                <!-- Fallback node : place_ball_fallback -->
+                <Fallback name="place_ball_fallback_keti">
+                    <!-- Condition node : ball_placed -->
+                    <RmfModeFinished name="rmf_mode_Finished_keti"/>
+                    <!-- Action node : place_ball -->
+                    <LiftDown name="lift_down_keti"/>
+                </Fallback>
+            </Sequence>
+
+            <!-- Action node : ask_for_help -->
+            <AskForHelp name="ask_for_help_keti"/>
+
+        </Fallback>
+    </BehaviorTree>
+</root >

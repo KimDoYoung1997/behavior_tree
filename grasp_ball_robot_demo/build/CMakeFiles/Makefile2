@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/docking.dir/all
 all: CMakeFiles/grasp_place_robot_demo.dir/all
 
 .PHONY : all
@@ -63,9 +64,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/docking.dir/clean
 clean: CMakeFiles/grasp_place_robot_demo.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/docking.dir
+
+# All Build rule for target.
+CMakeFiles/docking.dir/all:
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/depend
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles --progress-num=1,2 "Built target docking"
+.PHONY : CMakeFiles/docking.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/docking.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/docking.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles 0
+.PHONY : CMakeFiles/docking.dir/rule
+
+# Convenience name for target.
+docking: CMakeFiles/docking.dir/rule
+
+.PHONY : docking
+
+# clean rule for target.
+CMakeFiles/docking.dir/clean:
+	$(MAKE) -f CMakeFiles/docking.dir/build.make CMakeFiles/docking.dir/clean
+.PHONY : CMakeFiles/docking.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/grasp_place_robot_demo.dir
@@ -74,7 +103,7 @@ clean: CMakeFiles/grasp_place_robot_demo.dir/clean
 CMakeFiles/grasp_place_robot_demo.dir/all:
 	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/depend
 	$(MAKE) -f CMakeFiles/grasp_place_robot_demo.dir/build.make CMakeFiles/grasp_place_robot_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles --progress-num=1,2 "Built target grasp_place_robot_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/keti/behavior_tree_ws/grasp_ball_robot_demo/build/CMakeFiles --progress-num=3,4 "Built target grasp_place_robot_demo"
 .PHONY : CMakeFiles/grasp_place_robot_demo.dir/all
 
 # Build rule for subdir invocation for target.
