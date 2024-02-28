@@ -248,12 +248,13 @@ int main()
     BT::BehaviorTreeFactory factory;
 
     factory.registerSimpleCondition("BallFound", std::bind(ballFound));// Condition node 
-    factory.registerNodeType<FindBall>("FindBall"); // Action node with inheritance of SyncActionNode
+    factory.registerNodeType<FindBall>("FindBall"); // Action node with inheritance of SyncActionNode and has an output port with key {location}
 
+    // BT::SyncActionNode 를 상속하지 않는 BallClose 노드는 InputPort를 노드 내에서 add하는 부분이 없었다. 따라서 이 부분에서 추가로 add해줘야 한다.
     BT::PortsList say_something_ports = {BT::InputPort<std::vector<int>>("ball_location")};
-    // factory.registerSimpleCondition("BallClose", std::bind(ballClose));// Condition node
-    factory.registerSimpleCondition("BallClose", ballClose,say_something_ports);
-    factory.registerNodeType<ApproachBall>("ApproachBall"); // Action node with inheritance of SyncActionNode
+    // 기존 코드 주석 factory.registerSimpleCondition("BallClose", std::bind(ballClose));// BlackBoard 개념 도입전 사용하던 코드. 지금은 주석처리 해야만 한다.
+    factory.registerSimpleCondition("BallClose", ballClose,say_something_ports); // BlackBoard 개념 도입후 바뀐 코드. // Condition node and has an input port with key {location}
+    factory.registerNodeType<ApproachBall>("ApproachBall"); // Action node with inheritance of SyncActionNode and has an input port with key {location}
 
     factory.registerSimpleCondition("BallGrasped", std::bind(ballGrasped));// Condition node
     factory.registerNodeType<GraspBall>("GraspBall"); // Action node with inheritance of SyncActionNode
